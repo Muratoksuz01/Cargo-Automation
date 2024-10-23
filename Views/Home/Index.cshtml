@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container d-flex flex-column justify-content-center align-items-center">
+    <h2 class="text-center">XXX kargo sirketimize hosgeldiniz </h2>
+    <div class="p-5 bg-light rounded-5 w-50">
+        <p>lutfen giris yapınız </p>
+        <div class="d-flex">
+            <div class="dropdown m-1">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Bireyesl
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a asp-controller="Account" asp-action="BSign" class="dropdown-item" type="button">Sign In</a></li>
+                    <li><a asp-controller="Account" asp-action="BLogin" class="dropdown-item" type="button">Log In</a></li>
+                </ul>
+            </div>
+            <div class="dropdown m-1">
+                <button class="btn btn-danger dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Kurumsal
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a asp-controller="Account" asp-action="KLogin" class="dropdown-item" type="button">Log In</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
