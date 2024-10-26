@@ -1,0 +1,16 @@
+@* <ul class="nav flex-column">
+    <li class="nav-item">
+        <a class="nav-link" asp-action="SendCargo" asp-controller="Personal"  >Kargo Gönder</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link"  asp-controller="Personal" asp-action="Profil">Profil</a>
+    </li>
+</ul> *@
+
+
+<div class="list-group">
+    <a asp-action="SendCargo" asp-controller="Personal" class="list-group-item nav-link">Kargo Gönder</a>
+    <a asp-controller="Personal" asp-action="Profile" class="list-group-item nav-link">Profil</a>
+    <a asp-controller="Personal" asp-action="ControlCargo" class="list-group-item nav-link">Control Cargo</a>
+    <a asp-controller="Personal" asp-action="Logout" class="list-group-item nav-link">Logout</a>
+</div>

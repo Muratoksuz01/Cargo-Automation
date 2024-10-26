@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/home/murat/Documents/C# dersi/Cargo/wwwroot/img/img2.png",
+      "PackagePath": "staticwebassets/img/img2.png"
+    },
+    {
       "Id": "/home/murat/Documents/C# dersi/Cargo/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

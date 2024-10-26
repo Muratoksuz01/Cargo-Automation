@@ -1,0 +1,55 @@
+
+@model Cargo.PersonalMainPageViewModel
+@{
+    Layout = "~/Views/Shared/MainPage_Layout.cshtml"; // Ana Layout Bağlantısı Yok
+}
+
+
+<div class="card w-75">
+    <div class="card-body">
+        <form>
+
+
+            <input class="form-control m-1" type="text" value='@Context.Session.GetString("UserNumber")'
+                aria-label="readonly input example" readonly>
+            <input class="form-control m-1" type="text" value='@Context.Session.GetString("UserFullName")'
+                aria-label="readonly input example" readonly>
+            <input class="form-control m-1" type="text" value='@Context.Session.GetString("UserEmail")'
+                aria-label="readonly input example" readonly>
+            
+            <select class="form-select" aria-label="Default select example">
+                <option selected>please select a sube</option>
+                @foreach(var name in Model.Fullnames){
+                <option value='@name'>@name</option>
+
+                }
+
+
+               
+            </select>
+
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Your Adress</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Alıcı Emial Adress</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Alıcı Adress</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Alıcı number</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>

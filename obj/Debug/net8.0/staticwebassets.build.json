@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+lB360/u9B6EcFtJZYoLiYmQ+MyUk6ENKtpIoeICB7E=",
+  "Hash": "YIXHUEDtvMLRtEbU1ur5NZu3V0QY8Zxp2T/Pu/3/Llc=",
   "Source": "Cargo",
   "BasePath": "_content/Cargo",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/home/murat/Documents/C# dersi/Cargo/wwwroot/img/img2.png",
+      "SourceId": "Cargo",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/murat/Documents/C# dersi/Cargo/wwwroot/",
+      "BasePath": "_content/Cargo",
+      "RelativePath": "img/img2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/img2.png"
     },
     {
       "Identity": "/home/murat/Documents/C# dersi/Cargo/wwwroot/js/site.js",

@@ -1,0 +1,62 @@
+@{
+    Layout = "~/Views/Shared/MainPage_Layout.cshtml"; // Aynı layout'u kullanın
+}
+
+<div class="card w-100">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-2">
+                @* <img src=" https://placehold.co/600"
+                width="50"
+                alt="this field is for your profile img"
+                class="card-img-top rounded-circle"> *@
+                <img src="@Url.Content("~/img/" + (Context.Session.GetString("UserImgUrl") ?? "placeholder.png"))"
+                    alt="this field is for your profile img" class="card-img-top rounded-circle">
+                <span>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#ProfilImgUrl">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                </span>
+            </div>
+            <div class="col-10">
+                <span class="float-end">@Context.Session.GetString("UserFullName")
+                    <span>
+                        <a href="" data-bs-toggle="modal" data-bs-target="#ProfilFullName">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
+                    </span>
+                </span>
+
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-6">
+                <div class="p-2 m-2">
+                    <span>@Context.Session.GetString("UserEmail")</span>
+                    <span>
+                        <a href="" data-bs-toggle="modal" data-bs-target="#ProfilEmail">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a> </span>
+                </div>
+                <div class="p-2 m-2">
+                    <span>@Context.Session.GetString("UserNumber")</span>
+                    <span>
+                        <a href="" data-bs-toggle="modal" data-bs-target="#ProfilNumber">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a> </span>
+                </div>
+                <div class="p-2 m-2">
+                    <span>@Context.Session.GetString("UserPassword")</span>
+                    <span>
+                        <a href="" data-bs-toggle="modal" data-bs-target="#ProfilPassword">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a> </span>
+                </div>
+
+                <div class="col-6"></div>
+            </div>
+        </div>
+    </div>
+</div>

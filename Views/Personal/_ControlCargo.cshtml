@@ -1,0 +1,34 @@
+@{
+    Layout = "~/Views/Shared/MainPage_Layout.cshtml"; // Aynı layout'u kullanın
+}
+
+
+<div class="card w-100">
+    <div class="card-header">
+        <h2 class="text-center">Control Cargo</h2>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Receiver</th>
+                    <th scope="col">Sender</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>AlıcıFullanme <a href="#" data-bs-toggle="modal" data-bs-target="#CargoControlAliciModal"><i
+                                class="bi bi-info-circle"></i></a></td>
+                    <td>Gonderici Fullanem <a href="#" data-bs-toggle="modal"
+                            data-bs-target="#CargoControlGonderici"><i class="bi bi-info-circle"></i></a></td>
+                    <td>Status <a href="#" data-bs-toggle="modal" data-bs-target="#CargoControlStatus"><i
+                                class="bi bi-info-circle"></i></a></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+</div>

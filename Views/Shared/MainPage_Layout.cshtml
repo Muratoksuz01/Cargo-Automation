@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Personal Section</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Cargo.styles.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/fa3609583e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="container pt-5">
+        <div class="row" style="height: 85vh;">
+            <div class="col-2">
+                <!-- Sidebar'ı buraya dahil et (Partial View olarak) -->
+                @await Html.PartialAsync("PersonalSidebar")
+            </div>
+            <div class="col-10 d-flex justify-content-center align-items-center" id="content-area">
+                <!-- İçerik buraya yüklenecek -->
+                @RenderBody()
+          @await Html.PartialAsync("modalControlPage")
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @section Scripts {
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var links = document.querySelectorAll('.nav-link');
+                links.forEach(function (link) {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        var url = link.getAttribute('href');
+                        history.pushState(null, '', url);
+                        fetch(url)
+                            .then(response => response.text())
+                            .then(data => {
+                                var tempDiv = document.createElement('div');
+                                tempDiv.innerHTML = data;
+                                var newContent = tempDiv.querySelector('#content-area').innerHTML;
+                                document.getElementById('content-area').innerHTML = newContent;
+                            })
+                            .catch(error => console.error('Error loading content:', error));
+                    });
+                });
+            });
+
+            // Sayfa yenilendiğinde URL’ye göre içeriği yeniden yükle
+            window.addEventListener('popstate', function () {
+                fetch(location.href)
+                    .then(response => response.text())
+                    .then(data => {
+                        var tempDiv = document.createElement('div');
+                        tempDiv.innerHTML = data;
+                        var newContent = tempDiv.querySelector('#content-area').innerHTML;
+                        document.getElementById('content-area').innerHTML = newContent;
+                    });
+            });
+        </script>
+    }
+</body>
+
+</html>
